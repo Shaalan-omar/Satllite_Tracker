@@ -70,7 +70,7 @@ elif user_input == "Create a new list of favorite channels":
         if st.button("Add Channel", key=button_key):
             try:
                 # Query to insert data into "favouritechannel" table
-                query = "INSERT INTO favouritechannel (Username, ChannelName) VALUES (%s, %s)"
+                query = "INSERT INTO favouritechannel (Username, ChNAME) VALUES (%s, %s)"
                 cursor.execute(query, (username, channel_name))
                 conn.commit()  # Commit changes to the database
                 st.success(f"Channel '{channel_name}' added to favorites successfully!")
